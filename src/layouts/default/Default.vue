@@ -1,7 +1,6 @@
 <template>
   <v-responsive class="border rounded">
-    <v-app
-      >>
+    <v-app>>
       <v-app-bar scroll-behavior="elevate" height="60">
         <template v-slot:prepend>
           <v-app-bar-nav-icon @click="rail = !rail"></v-app-bar-nav-icon>
@@ -9,45 +8,23 @@
 
         <v-app-bar-title>
           <div class="d-flex align-center">
-            <img
-              width="30"
-              src="https://webfollow.cc/logo.svg"
-              alt="Top RSS Hub"
-              class="mr-2"
-            />
+            <img width="30" src="https://ifeed.cc/logo.svg" alt="Top RSS Hub" class="mr-2" />
             Top RSS Hub
-          </div></v-app-bar-title
-        >
+          </div>
+        </v-app-bar-title>
 
         <template v-slot:append>
-          <v-btn
-            icon
-            href="https://github.com/weekend-project-space/top-rss-hub"
-          >
+          <v-btn icon href="https://github.com/weekend-project-space/top-rss-hub">
             <v-icon>mdi-github</v-icon>
           </v-btn>
         </template>
       </v-app-bar>
-      <v-navigation-drawer
-        :rail="rail && !mobile"
-        :model-value="rail || !mobile"
-        class="border-none"
-      >
+      <v-navigation-drawer :rail="rail && !mobile" :model-value="rail || !mobile" class="border-none">
         <v-list density="compact" nav>
-          <v-list-item
-            prepend-icon="mdi-home-city"
-            title="首页"
-            value="home"
-            to="/"
-            :active="route.path === '/'"
-          ></v-list-item>
-          <v-list-item
-            prepend-icon="mdi-account"
-            title="我的"
-            value="account"
-            to="/account"
-            :active="route.path === '/account'"
-          ></v-list-item>
+          <v-list-item prepend-icon="mdi-home-city" title="首页" value="home" to="/"
+            :active="route.path === '/'"></v-list-item>
+          <v-list-item prepend-icon="mdi-account" title="我的" value="account" to="/account"
+            :active="route.path === '/account'"></v-list-item>
         </v-list>
       </v-navigation-drawer>
 
